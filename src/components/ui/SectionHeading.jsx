@@ -6,17 +6,17 @@ export default function SectionHeading({
   title,
   description,
   className = '',
-  titleClassName = 'text-3xl sm:text-5xl',
-  descriptionClassName = 'text-sm',
+  titleClassName = 'text-2xl sm:text-4xl lg:text-5xl',
+  descriptionClassName = 'text-xs sm:text-sm',
 }) {
   return (
-    <Stagger inView={false} gap={0.12} className={`text-center mx-auto ${className}`}>
-      <Item className="inline-flex items-center justify-center gap-3 mb-2">
-        <span className="w-8 h-[2px] bg-[#ec5b13]" />
-        <span className="text-xs uppercase tracking-widest font-bold text-[#ec5b13]">{eyebrow}</span>
-        <span className="w-8 h-[2px] bg-[#ec5b13]" />
+    <Stagger inView={false} gap={0.12} className={`text-center mx-auto px-1 ${className}`}>
+      <Item className="inline-flex items-center justify-center gap-2 sm:gap-3 mb-2">
+        <span className="w-5 sm:w-8 h-[2px] bg-[#ec5b13]" />
+        <span className="text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest font-bold text-[#ec5b13]">{eyebrow}</span>
+        <span className="w-5 sm:w-8 h-[2px] bg-[#ec5b13]" />
       </Item>
-      <Item as="h1" className={`font-serif font-bold text-[#f5f0eb] leading-tight mb-3 ${titleClassName}`}>
+      <Item as="h1" className={`font-serif font-bold text-[#f5f0eb] leading-tight mb-2.5 sm:mb-3 ${titleClassName}`}>
         {title}
       </Item>
       {description && (

@@ -27,20 +27,20 @@ export default function MenuPage() {
   };
 
   return (
-    <main className="w-full flex-grow py-10 lg:py-14 bg-[#140e0c]">
-      <div className="max-w-[1440px] mx-auto px-6 lg:px-14">
+    <main className="w-full flex-grow py-6 sm:py-10 lg:py-14 bg-[#140e0c]">
+      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-14">
         <SectionHeading
           eyebrow="ROYAL KITCHEN DELIGHTS"
           title="Our Signature Menu"
           description="Handpicked royal recipes cooked fresh daily with unadulterated cold pressed ingredients."
-          className="max-w-2xl mb-8"
+          className="max-w-2xl mb-6 sm:mb-8"
         />
 
-        <div className="w-full overflow-x-auto pb-4 mb-8">
+        <div className="w-full overflow-x-auto no-scrollbar pb-3 mb-6 sm:mb-8">
           <FilterTabs options={MENU_CATEGORIES} value={category} onChange={changeCategory} layoutId="menu-tab" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
           <AnimatePresence mode="popLayout">
             {visible.map((item, i) => (
               <MenuCard key={item.id} item={item} index={i} onAdd={addItem} />

@@ -6,7 +6,7 @@ const base =
 export default function Pagination({ page, pages, onChange }) {
   if (pages <= 1) return null;
   return (
-    <nav aria-label="Pagination" className="flex items-center justify-center gap-2 mt-12 pt-4">
+    <nav aria-label="Pagination" className="flex items-center justify-center gap-1.5 sm:gap-2 mt-8 sm:mt-12 pt-2 sm:pt-4 flex-wrap">
       <button
         type="button"
         aria-label="Previous page"

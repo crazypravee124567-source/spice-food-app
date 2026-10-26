@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   background-color: #140e0c;
   color: #f5f0eb;
   font-family: 'Public Sans', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 ::selection {
@@ -17,6 +26,15 @@ body {
 ::-webkit-scrollbar-track { background: #1a1412; }
 ::-webkit-scrollbar-thumb { background: #382b26; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #ec5b13; }
+
+/* Hide scrollbar for clean horizontal swipe on mobile */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 
 .vertical-rl {
   writing-mode: vertical-rl;
@@ -38,3 +56,4 @@ body {
 @media (prefers-reduced-motion: reduce) {
   .animate-float, .animate-glow { animation: none; }
 }
+

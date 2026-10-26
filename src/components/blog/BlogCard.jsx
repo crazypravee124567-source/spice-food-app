@@ -18,13 +18,13 @@ export default function BlogCard({ article, index = 0 }) {
           <img alt={article.title} src={article.image} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ease-out" />
           <span className="absolute top-3 left-3 bg-[#ec5b13] text-white text-[10px] uppercase px-2.5 py-1 rounded-lg font-bold shadow-md">{article.category}</span>
         </div>
-        <div className="p-5 space-y-2">
-          <h3 className="font-serif text-lg text-[#f5f0eb] group-hover:text-[#ec5b13] transition-colors line-clamp-2 font-bold">{article.title}</h3>
+        <div className="p-4 sm:p-5 space-y-1.5 sm:space-y-2">
+          <h3 className="font-serif text-base sm:text-lg text-[#f5f0eb] group-hover:text-[#ec5b13] transition-colors line-clamp-2 font-bold">{article.title}</h3>
           <p className="text-xs text-[#9e9188] line-clamp-2 leading-relaxed">{article.desc}</p>
         </div>
       </div>
 
-      <div className="px-5 pb-5 pt-2 flex items-center justify-between border-t border-[#382b26]/50 mt-2">
+      <div className="px-4 sm:px-5 pb-4 sm:pb-5 pt-2 flex items-center justify-between border-t border-[#382b26]/50 mt-2">
         <div className="flex flex-col">
           <span className="text-xs text-[#f5f0eb] font-semibold">{article.author}</span>
           <span className="text-[10px] text-[#9e9188]">{article.date}</span>

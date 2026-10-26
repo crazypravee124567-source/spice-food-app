@@ -49,15 +49,15 @@ export default function ReservationForm({ onSubmitted }) {
       animate="show"
       className="w-full lg:w-[55%]"
     >
-      <div className="bg-[#241a17] rounded-lg shadow-2xl p-6 sm:p-8 border border-[#382b26]">
-        <h2 className="text-xl font-bold text-[#f5f0eb] mb-5 font-serif">Your Reservation Details</h2>
+      <div className="bg-[#241a17] rounded-lg shadow-2xl p-4 sm:p-6 lg:p-8 border border-[#382b26]">
+        <h2 className="text-lg sm:text-xl font-bold text-[#f5f0eb] mb-4 sm:mb-5 font-serif">Your Reservation Details</h2>
 
         <AnimatePresence mode="wait" initial={false}>
           {submitted ? (
             <ReservationSuccess key="done" data={form} onReset={reset} />
           ) : (
             <motion.form key="form" exit={{ opacity: 0, y: -10 }} onSubmit={handleSubmit}>
-              <Stagger inView={false} gap={0.07} delay={0.3} className="space-y-4">
+              <Stagger inView={false} gap={0.07} delay={0.3} className="space-y-3.5 sm:space-y-4">
                 <Item>
                   <FormField label="Full Name" htmlFor="fullName">
                     <input id="fullName" type="text" required placeholder="e.g. Anandha Kumar" className={`${inputClass} h-11`} {...bind('fullName')} />
